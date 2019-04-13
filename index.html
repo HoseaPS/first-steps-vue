@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Vue - First Steps</title>
+    <title>Vue - First Class</title>
   </head>
   <body>
     <div id="app">
-      <div v-if="ehIsso">
-        <a :href="href">Yeah!</a>
-        <p v-show="ehNada">Eita!</p>
-        <input
-          :style="{display: espacozao}"
-          v-model="inputContent"
-          value="inputContent"
-        />
-        <p>{{ inputContent }}</p>
-      </div>
+      <span>shabba {{ ranks }}</span>
+    </div>
+    <div id="app1">
+      {{ ferramenta }}
+    </div>
+    <div id="app2">
+      {{ instrumento }}
     </div>
 
     <script>
-      const vm = new Vue({
+      var vm1 = new Vue({
         el: "#app",
         data: {
-          mensagem: "Hello World",
-          href: "http://www.clickjogos.com.br/jogos-de-gatos",
-          ehIsso: true,
-          ehNada: false,
-          inputContent: "Shabba Ranks",
-          espacozao: "block"
+          ranks: "ranks"
+        }
+      });
+
+      var vm1 = new Vue({
+        el: "#app1",
+        data: {
+          ferramenta: "Cerrotão"
+        }
+      });
+
+      var vm2 = new Vue({
+        el: "#app2",
+        data: {
+          instrumento: "Violona"
         }
       });
     </script>
