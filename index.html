@@ -5,38 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Vue - First Class</title>
+    <title>Vue - Second Class</title>
   </head>
   <body>
     <div id="app">
-      <span>shabba {{ ranks }}</span>
-    </div>
-    <div id="app1">
-      {{ ferramenta }}
-    </div>
-    <div id="app2">
-      {{ instrumento }}
+      <p>Lado: {{ lado }}</p>
+      <p>Perímetro: {{ lado * 4 }}</p>
+      <p>Área: {{ lado * lado }}</p>
     </div>
 
     <script>
-      var vm1 = new Vue({
+      var vm = new Vue({
         el: "#app",
         data: {
-          ranks: "ranks"
-        }
-      });
-
-      var vm1 = new Vue({
-        el: "#app1",
-        data: {
-          ferramenta: "Cerrotão"
-        }
-      });
-
-      var vm2 = new Vue({
-        el: "#app2",
-        data: {
-          instrumento: "Violona"
+          lado: 30
         }
       });
     </script>
